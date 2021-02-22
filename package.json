@@ -1,0 +1,41 @@
+{
+  "name": "rpr-prototype",
+  "version": "1.0.0",
+  "description": "RPR Alpha Prototype",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev": "NEXT_TELEMETRY_DISABLED=1 ts-node src/server/server.ts",
+    "build": "NEXT_TELEMETRY_DISABLED=1 NODE_ENV=production next build && tsc --project tsconfig.server.json",
+    "start": "NEXT_TELEMETRY_DISABLED=1 NODE_PATH=. NODE_ENV=production node .next/prod-server/server/server.js",
+    "typeorm": "ts-node ./node_modules/typeorm/cli.js",
+    "migration:generate": "ts-node ./node_modules/typeorm/cli.js migration:generate --config src/server/database-config.ts -n",
+    "migration:migrate": "ts-node ./node_modules/typeorm/cli.js migration:run --config src/server/database-config.ts",
+    "migration:migrate-prod": "NODE_ENV=production typeorm migration:run --config .next/prod-server/server/database-config.js",
+    "migration:revert": "ts-node ./node_modules/typeorm/cli.js migration:revert --config src/server/database-config.ts"
+  },
+  "dependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-decorators": "^7.12.12",
+    "cfenv": "^1.2.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "govuk-frontend": "^3.10.2",
+    "html-react-parser": "^1.0.0",
+    "next": "^10.0.0",
+    "pg": "^8.5.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "reflect-metadata": "^0.1.13",
+    "sass": "^1.30.0",
+    "typeorm": "^0.2.29",
+    "yup": "^0.32.8"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.14",
+    "@types/react": "^17.0.0",
+    "@types/yup": "^0.29.11",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}

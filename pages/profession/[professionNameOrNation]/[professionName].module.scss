@@ -1,0 +1,36 @@
+.regulated-profession-details {
+    table {
+        table-layout: fixed;
+
+        td {
+            word-wrap: break-word;
+        }
+    }
+}
+
+.regulated-profession-details__fieldName {
+    border: 0;
+    min-width: 50%;
+}
+
+.regulated-profession-details__fieldValue {
+    border: 0;
+}
+
+.share-icons {
+    height: 50px;
+
+    > a {
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    svg {
+        color: #1d70b8;
+    }
+
+    span {
+        padding: 0 10px;
+    }
+}

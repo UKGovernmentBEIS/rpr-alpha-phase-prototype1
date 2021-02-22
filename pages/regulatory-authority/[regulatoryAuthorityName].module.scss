@@ -1,0 +1,27 @@
+.regulatory-authority-details {
+    table {
+        table-layout: fixed;
+
+        td {
+            word-wrap: break-word;
+        }
+    }
+}
+
+.share-icons {
+    height: 50px;
+
+    > a {
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    svg {
+        color: #1d70b8;
+    }
+
+    span {
+        padding: 0 10px;
+    }
+}

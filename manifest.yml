@@ -1,0 +1,11 @@
+applications:
+  - name: rpr-alpha-prototype1
+    path: .
+    command: npm run start
+    memory: 256M
+    buildpacks:
+    - nodejs_buildpack
+    services:
+    - postgres12-1
+    env:
+      LOCATION: 'London region - GovPaaS'

@@ -1,9 +1,10 @@
 {
-  "name": "rpr-prototype",
+  "name": "prototype-rpr-alpha",
   "version": "1.0.0",
   "description": "RPR Alpha Prototype",
   "main": "index.js",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "NEXT_TELEMETRY_DISABLED=1 ts-node src/server/server.ts",
     "build": "NEXT_TELEMETRY_DISABLED=1 NODE_ENV=production next build && tsc --project tsconfig.server.json",
